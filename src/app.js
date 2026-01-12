@@ -7,29 +7,34 @@ import "./assets/img/4geeks.ico";
 
 window.onload = function() {
   //write your code here
-  const p = document.getElementById("excuse");
-  console.log(p.textContent);
+  const documentID = document.getElementById("excuse");
 
   let testArray = ["a","b","c"];
-  let secondtestArray = ["1","2","3"];
-  let thirdtestArray = ["!", "@","#"];
+  let secondArray = ["one", "two", "three"];
+  let thirdArray = ["hello", "hi", "boop"];
 
-  function getRandomIndex(array, array2, array3){
+  function getRandomIndex(array){
     const length = array.length;
     const result = Math.floor(Math.random() * length);
 
-    const secondlength = array2.length;
-    const secondresult = Math.floor(Math.random() * length);
-    
-    const thirdlength = array3.length;
-    const thirdresult = Math.floor(Math.random() * length);
+    return result;
 
-    return result + " " + secondresult + " " + thirdresult;
+  }
+  function getSecondRandomIndex(secondArray){
+    const secondLength = secondArray.length;
+    const secondResult = Math.floor(Math.random() * secondLength);
+
+    return secondResult;
   }
 
-  console.log(testArray[getRandomIndex(testArray)]);
-  console.log(secondtestArray[getRandomIndex(secondtestArray)]);
-  console.log(thirdtestArray[getRandomIndex(thirdtestArray)]);
-  
-  p.textContent = testArray[getRandomIndex(testArray)];
+  function getThirdRandomIndex(thirdArray){
+    const thirdLength = thirdArray.length;
+    const thirdResult = Math.floor(Math.random() * thirdLength);
+
+    return thirdResult;
+  }
+
+  let finalResult = testArray[getRandomIndex(testArray)] + secondArray[getSecondRandomIndex(secondArray)] + thirdArray[getThirdRandomIndex(thirdArray)];
+  console.log(finalResult);
+  documentID.textContent = finalResult;
 };
