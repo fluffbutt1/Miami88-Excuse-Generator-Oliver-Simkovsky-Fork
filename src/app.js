@@ -9,10 +9,10 @@ window.onload = function () {
   //write your code here
   const documentID = document.getElementById("excuse");
 
-  const testArray = ["Chicken tenders", "Oliver", "Goku", "Naruto"];
-  const secondArray = ["kamehameha'd", "broke", "ate", "stole"];
-  const thirdArray = ["my homework", "the car", "my will to live"];
-  const fourthArray = ["while I was sleeping",
+  const who = ["Chicken tenders", "Oliver", "Goku", "Naruto"];
+  const action = ["kamehameha'd", "broke", "ate", "stole"];
+  const what = ["my homework", "the car", "my will to live"];
+  const when = ["while I was sleeping",
     "while I was training to be Hokage",
     "while I was training with Picollo",
     "while I was taking a bathroom break"];
@@ -46,16 +46,16 @@ window.onload = function () {
   }
 
   function Result(array1, array2, array3, array4){
-    array1 = testArray[getRandomIndex(testArray)];
-    array2 = secondArray[getSecondRandomIndex(secondArray)];
-    array3 = thirdArray[getThirdRandomIndex(thirdArray)];
-    array4 = fourthArray[getFourthRandomIndex(fourthArray)];
+    array1 = who[getRandomIndex(who)];
+    array2 = action[getSecondRandomIndex(action)];
+    array3 = what[getThirdRandomIndex(what)];
+    array4 = when[getFourthRandomIndex(when)];
 
     let space = " ";
     return array1 + space + array2 + space + array3 + space + array4;
   }
 
-  let finalResult = Result(testArray, secondArray, thirdArray, fourthArray);
+  let finalResult = Result(who, action, what, when);
   console.log(finalResult);
   documentID.textContent = finalResult;
 };
