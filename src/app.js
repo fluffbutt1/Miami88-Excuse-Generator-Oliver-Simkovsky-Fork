@@ -45,7 +45,17 @@ window.onload = function () {
     return fourthResult;
   }
 
-  let finalResult = testArray[getRandomIndex(testArray)] + " " + secondArray[getSecondRandomIndex(secondArray)] + " " + thirdArray[getThirdRandomIndex(thirdArray)] + " " + fourthArray[getFourthRandomIndex(fourthArray)];
+  function Result(array1, array2, array3, array4){
+    array1 = testArray[getRandomIndex(testArray)];
+    array2 = secondArray[getSecondRandomIndex(secondArray)];
+    array3 = thirdArray[getThirdRandomIndex(thirdArray)];
+    array4 = fourthArray[getFourthRandomIndex(fourthArray)];
+
+    let space = " ";
+    return array1 + space + array2 + space + array3 + space + array4;
+  }
+
+  let finalResult = Result(testArray, secondArray, thirdArray, fourthArray);
   console.log(finalResult);
   documentID.textContent = finalResult;
 };
