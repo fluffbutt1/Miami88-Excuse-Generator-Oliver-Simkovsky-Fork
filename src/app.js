@@ -9,9 +9,9 @@ window.onload = function() {
   //write your code here
   const documentID = document.getElementById("excuse");
 
-  let testArray = ["a","b","c"];
-  let secondArray = ["one", "two", "three"];
-  let thirdArray = ["hello", "hi", "boop"];
+  const testArray = ["Chicken tenders","Oliver","Goku", "Naruto"];
+  const secondArray = ["kamehameha'd", "broke", "ate", "stole"];
+  const thirdArray = ["my homework", "the car", "my will to live"];
 
   function getRandomIndex(array){
     const length = array.length;
@@ -34,7 +34,7 @@ window.onload = function() {
     return thirdResult;
   }
 
-  let finalResult = testArray[getRandomIndex(testArray)] + secondArray[getSecondRandomIndex(secondArray)] + thirdArray[getThirdRandomIndex(thirdArray)];
+  let finalResult = testArray[getRandomIndex(testArray)] + " " + secondArray[getSecondRandomIndex(secondArray)] + " " + thirdArray[getThirdRandomIndex(thirdArray)];
   console.log(finalResult);
   documentID.textContent = finalResult;
 };
